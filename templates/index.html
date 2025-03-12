@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Face Ethnicity Detection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Live Face Ethnicity Detection</h1>
+        <div class="camera-container">
+            <img src="{{ url_for('video_feed') }}" width="100%" height="auto">
+        </div>
+        <button id="switchCamera" class="camera-switch">Switch Camera</button>
+        <div class="fps-counter">FPS: <span id="fpsValue">0</span></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

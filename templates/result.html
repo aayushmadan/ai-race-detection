@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Analysis Result</title>
+</head>
+<body>
+    <h1>Face Analysis Result</h1>
+    <h2>Detected Faces</h2>
+    <ul>
+    {% for face in faces %}
+        <li>Face {{ loop.index }} - {{ face }}</li>
+    {% endfor %}
+    </ul>
+    <h2>Analysis Result</h2>
+    <pre>{{ result }}</pre>
+    <a href="{{ url_for('upload_form') }}">Upload another image</a>
+</body>
+</html>
